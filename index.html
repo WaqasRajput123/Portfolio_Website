@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waqas Hanif - Front-End Developer Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed w-full z-50 bg-gray-800 bg-opacity-90 backdrop-blur-sm shadow-lg py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-teal-400 hover:text-teal-300 transition-colors duration-300">
+                Waqas Hanif
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors duration-300">Home</a>
+                <a href="#about" class="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors duration-300">About</a>
+                <a href="#skills" class="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors duration-300">Skills</a>
+                <a href="#projects" class="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors duration-300">Projects</a>
+                <a href="#services" class="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors duration-300">Services</a>
+                <a href="#contact" class="text-lg font-medium text-gray-200 hover:text-teal-400 transition-colors duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button (Hamburger) - Not implemented in JS for simplicity, but easily addable -->
+            <div class="md:hidden">
+                <button class="text-gray-200 hover:text-teal-400 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center text-center p-4 overflow-hidden bg-gradient-to-br from-gray-900 to-gray-800">
+        <!-- Abstract background animation -->
+        <div class="absolute inset-0 z-0 opacity-10">
+            <svg id="hero-flow-svg" class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <path id="flow" fill="none" stroke="#2DD4BF" stroke-width="0.5" d="M0,50 C20,30 40,70 60,50 C80,30 100,70 120,50" />
+                <use href="#flow" x="10" y="10" transform="rotate(10)"/>
+                <use href="#flow" x="-10" y="-10" transform="rotate(-5)"/>
+            </svg>
+        </div>
+
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <!-- Placeholder for Waqas's headshot - replace with actual image -->
+            <img
+                src="waqas.jpg"
+                alt="Waqas Hanif"
+                class="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-teal-400 shadow-xl object-cover"
+                onerror="this.onerror=null; this.src='https://placehold.co/150x150/6EE7B7/000000?text=Waqas';"
+            />
+            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight mb-4 animate-fade-in">
+                Waqas Hanif
+            </h1>
+            <p class="text-2xl md:text-3xl text-teal-300 font-light mb-8 animate-fade-in-delay-1">
+                Crafting Seamless Web Experiences
+            </p>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto animate-fade-in-delay-2">
+                Front-End Developer | Freelancer | Digital Marketer | Graphic Designer
+            </p>
+            <div class="flex justify-center space-x-4 mt-10 animate-fade-in-delay-3">
+                <a href="#projects" class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500 focus:ring-opacity-50">
+                    View My Work
+                </a>
+                <a href="#contact" class="bg-transparent border-2 border-teal-500 hover:bg-teal-500 text-teal-500 hover:text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500 focus:ring-opacity-50">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 px-6 bg-gray-800">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">About Me</h2>
+            <div class="bg-gray-700 p-8 rounded-xl shadow-lg mb-12 transform hover:scale-[1.01] transition-transform duration-300">
+                <p class="text-lg text-gray-200 leading-relaxed mb-6">
+                    Hello! I'm Waqas Hanif, a passionate Front-End Developer with a year of hands-on experience building intuitive and visually appealing web applications. My journey in technology began early, fostering a strong foundation in both design and development.
+                </p>
+                <p class="text-lg text-gray-200 leading-relaxed mb-6">
+                    Beyond coding, I'm a <strong class="text-teal-300">certified freelancer</strong> and <strong class="text-teal-300">digital marketer</strong>, bringing a strategic edge to every project. My <strong class="text-teal-300">strong grip on graphic design</strong> ensures that the user interface isn't just functional but also aesthetically compelling. I also possess a solid understanding of programming fundamentals, with expertise in <strong class="text-teal-300">basic C++</strong> and <strong class="text-teal-300">advanced Java language</strong>, allowing me to bridge the gap between front-end aesthetics and back-end logic.
+                </p>
+            </div>
+
+            <h3 class="text-3xl font-bold text-center text-teal-400 mb-8">My Journey</h3>
+            <div class="relative border-l-4 border-teal-500 pl-8 ml-4 md:ml-0">
+                <!-- Education Timeline Item 1 -->
+                <div class="mb-8 relative pl-6 pb-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v6m0 0H9m3 0h3m-3-12l9-5-9-5-9 5 9 5z" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-400">2021</p>
+                    <h4 class="text-xl font-semibold text-white mt-1">Matriculation</h4>
+                    <p class="text-gray-300">Al Siraj School</p>
+                </div>
+                <!-- Education Timeline Item 2 -->
+                <div class="mb-8 relative pl-6 pb-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v6m0 0H9m3 0h3m-3-12l9-5-9-5-9 5 9 5z" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-400">2023</p>
+                    <h4 class="text-xl font-semibold text-white mt-1">Intermediate (ICS)</h4>
+                    <p class="text-gray-300">Punjab Group of Colleges</p>
+                </div>
+                <!-- Education Timeline Item 3 -->
+                <div class="mb-8 relative pl-6 pb-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14v6m0 0H9m3 0h3m-3-12l9-5-9-5-9 5 9 5z" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-400">Currently</p>
+                    <h4 class="text-xl font-semibold text-white mt-1">Software Engineering</h4>
+                    <p class="text-gray-300">University of Gujrat</p>
+                </div>
+                <!-- Experience Timeline Item: Front-End Development -->
+                <div class="mb-8 relative pl-6 pb-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
+                        <svg class="w-4 h-4 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.513 23.513 0 0112 15c-3.185 0-6.22-1.282-8.455-3.245m16.91 0A23.513 23.513 0 0112 9c-3.185 0-6.22 1.282-8.455 3.245M12 8V4m0 4v4m-4 8h8M4 12h16" /></svg>
+                    </div>
+                    <p class="text-sm text-gray-400">1 Year</p>
+                    <h4 class="text-xl font-semibold text-white mt-1">Front-End Development Experience</h4>
+                    <p class="text-gray-300">Building intuitive and visually appealing web applications.</p>
+                </div>
+                <!-- New Experience Timeline Item: Graphic and Logo Design -->
+                <div class="mb-8 relative pl-6 pb-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
+                        <i data-lucide="brush" class="w-4 h-4 text-gray-900"></i>
+                    </div>
+                    <p class="text-sm text-gray-400">1 Year</p>
+                    <h4 class="text-xl font-semibold text-white mt-1">Graphic & Logo Design Experience</h4>
+                    <p class="text-gray-300">Creating impactful visual identities and creative assets.</p>
+                </div>
+                <!-- New Experience Timeline Item: Freelancing -->
+                <div class="mb-8 relative pl-6 pb-8">
+                    <div class="absolute -left-3 top-0 w-6 h-6 bg-teal-500 rounded-full flex items-center justify-center">
+                        <i data-lucide="briefcase" class="w-4 h-4 text-gray-900"></i>
+                    </div>
+                    <p class="text-sm text-gray-400">1 Year</p>
+                    <h4 class="text-xl font-semibold text-white mt-1">Freelancing Experience</h4>
+                    <p class="text-gray-300">Delivering high-quality projects as an independent professional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <!-- Skill Card: Front-End Development -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg text-center flex flex-col items-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <div class="mb-4">
+                        <i data-lucide="code" class="w-8 h-8 text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Front-End Development</h3>
+                    <p class="text-gray-300 text-sm">HTML5, CSS3 (Tailwind CSS), JavaScript (ES6+), React.js</p>
+                </div>
+                <!-- Skill Card: Graphic Design -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg text-center flex flex-col items-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <div class="mb-4">
+                        <i data-lucide="palette" class="w-8 h-8 text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Graphic Design</h3>
+                    <p class="text-gray-300 text-sm">Adobe Photoshop, Adobe Illustrator, Figma</p>
+                </div>
+                <!-- Skill Card: Digital Marketing -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg text-center flex flex-col items-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <div class="mb-4">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Digital Marketing</h3>
+                    <p class="text-gray-300 text-sm">Certified Digital Marketer, SEO Basics</p>
+                </div>
+                <!-- Skill Card: Programming Languages -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg text-center flex flex-col items-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <div class="mb-4">
+                        <i data-lucide="book-open" class="w-8 h-8 text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Programming Languages</h3>
+                    <p class="text-gray-300 text-sm">Basic C++, Advanced Java</p>
+                </div>
+                <!-- Skill Card: Freelancing -->
+                <div class="bg-gray-700 p-6 rounded-xl shadow-lg text-center flex flex-col items-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <div class="mb-4">
+                        <i data-lucide="award" class="w-8 h-8 text-teal-400"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mb-2">Freelancing</h3>
+                    <p class="text-gray-300 text-sm">Certified Freelancer</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-gray-800">
+        <div class="container mx-auto max-w-5xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Project Card 1 -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col h-full">
+                    <img
+                        src="https://placehold.co/600x400/3B82F6/FFFFFF?text=Project+1"
+                        alt="E-commerce Dashboard UI"
+                        class="w-full h-48 object-cover border-b-2 border-teal-500"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/6B7280/FFFFFF?text=Image+Not+Found';"
+                    />
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-teal-400 mb-2">E-commerce Dashboard UI</h3>
+                        <p class="text-gray-300 text-base mb-4 flex-grow">A responsive and interactive dashboard UI for an e-commerce platform, focusing on data visualization and user experience.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">React</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">Tailwind CSS</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">Chart.js</span>
+                        </div>
+                        <div class="flex justify-start space-x-4 mt-auto">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/WaqasRajput123" target="_blank" rel="noopener noreferrer" class="border border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col h-full">
+                    <img
+                        src="https://placehold.co/600x400/F97316/FFFFFF?text=Project+2"
+                        alt="Personal Blog Website"
+                        class="w-full h-48 object-cover border-b-2 border-teal-500"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/6B7280/FFFFFF?text=Image+Not+Found';"
+                    />
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-teal-400 mb-2">Personal Blog Website</h3>
+                        <p class="text-gray-300 text-base mb-4 flex-grow">A clean and minimalist personal blog website with a custom CMS integration, designed for easy content management.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">JavaScript</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">Node.js</span>
+                        </div>
+                        <div class="flex justify-start space-x-4 mt-auto">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/WaqasRajput123" target="_blank" rel="noopener noreferrer" class="border border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 flex flex-col h-full">
+                    <img
+                        src="https://placehold.co/600x400/8B5CF6/FFFFFF?text=Project+3"
+                        alt="Creative Agency Landing Page"
+                        class="w-full h-48 object-cover border-b-2 border-teal-500"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x400/6B7280/FFFFFF?text=Image+Not+Found';"
+                    />
+                    <div class="p-6 flex-grow flex flex-col">
+                        <h3 class="text-2xl font-bold text-teal-400 mb-2">Creative Agency Landing Page</h3>
+                        <p class="text-gray-300 text-base mb-4 flex-grow">A visually stunning landing page for a creative agency, featuring smooth animations and a strong brand identity.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">HTML</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">CSS (Sass)</span>
+                            <span class="bg-teal-700 text-teal-100 text-xs font-semibold px-2.5 py-0.5 rounded-full">GSAP</span>
+                        </div>
+                        <div class="flex justify-start space-x-4 mt-auto">
+                            <a href="#" target="_blank" rel="noopener noreferrer" class="bg-teal-500 hover:bg-teal-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                                Live Demo
+                            </a>
+                            <a href="https://github.com/WaqasRajput123" target="_blank" rel="noopener noreferrer" class="border border-teal-500 text-teal-400 hover:bg-teal-500 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-opacity-50">
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <p class="text-lg text-gray-300">
+                    This is a placeholder for your actual projects. Feel free to add more!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6 bg-gray-900">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">My Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service Card: Front-End Development -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <i data-lucide="code" class="w-12 h-12 text-teal-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Front-End Development</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Crafting responsive and interactive user interfaces using modern web technologies to bring your ideas to life on the web.
+                    </p>
+                </div>
+                <!-- Service Card: UI/UX Design -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <i data-lucide="layout" class="w-12 h-12 text-teal-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">UI/UX Design</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Designing intuitive and engaging user experiences, from wireframing and prototyping to high-fidelity mockups that delight users.
+                    </p>
+                </div>
+                <!-- Service Card: Graphic Design -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <i data-lucide="palette" class="w-12 h-12 text-teal-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Graphic Design</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Creating compelling visual content, including logos, branding materials, and digital assets that capture attention and communicate effectively.
+                    </p>
+                </div>
+                <!-- Service Card: Digital Marketing Consultation -->
+                <div class="bg-gray-700 p-8 rounded-xl shadow-lg flex flex-col items-center text-center hover:bg-gray-600 transform hover:scale-105 transition-all duration-300">
+                    <i data-lucide="megaphone" class="w-12 h-12 text-teal-400 mb-4"></i>
+                    <h3 class="text-2xl font-semibold text-white mb-3">Digital Marketing Consultation</h3>
+                    <p class="text-gray-300 text-base leading-relaxed">
+                        Providing insights and strategies for effective online presence, including basic SEO optimization and social media engagement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-800">
+        <div class="container mx-auto max-w-2xl">
+            <h2 class="text-4xl font-bold text-center text-teal-400 mb-12">Get In Touch</h2>
+            <div class="bg-gray-700 p-8 rounded-xl shadow-lg transform hover:scale-[1.01] transition-transform duration-300">
+                <p class="text-lg text-gray-200 text-center mb-8">
+                    I'm currently open for freelance projects and collaborations. Feel free to reach out!
+                </p>
+                <form class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-300 text-sm font-bold mb-2">Name</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            class="shadow-sm rounded-lg appearance-none border border-gray-600 w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-800 transition-colors duration-300"
+                            placeholder="Your Name"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-300 text-sm font-bold mb-2">Email</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            class="shadow-sm rounded-lg appearance-none border border-gray-600 w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-800 transition-colors duration-300"
+                            placeholder="your@example.com"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-300 text-sm font-bold mb-2">Subject</label>
+                        <input
+                            type="text"
+                            id="subject"
+                            name="subject"
+                            class="shadow-sm rounded-lg appearance-none border border-gray-600 w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-800 transition-colors duration-300"
+                            placeholder="Subject of your message"
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-300 text-sm font-bold mb-2">Message</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            class="shadow-sm rounded-lg appearance-none border border-gray-600 w-full py-3 px-4 text-gray-200 leading-tight focus:outline-none focus:ring-2 focus:ring-teal-500 bg-gray-800 transition-colors duration-300"
+                            placeholder="Your message..."
+                            required
+                        ></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button
+                            type="submit"
+                            class="bg-teal-500 hover:bg-teal-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-teal-500 focus:ring-opacity-50"
+                        >
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+
+                <div class="flex justify-center space-x-6 mt-10">
+                    <a href="mailto:wp8546582@gmail.com" class="text-teal-400 hover:text-teal-300 transition-colors duration-300">
+                        <i data-lucide="mail" class="w-8 h-8"></i>
+                        <span class="sr-only">Email Waqas Hanif</span>
+                    </a>
+                    <a href="https://github.com/WaqasRajput123" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 transition-colors duration-300">
+                        <i data-lucide="github" class="w-8 h-8"></i>
+                        <span class="sr-only">View GitHub Profile</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/waqasrajput786" target="_blank" rel="noopener noreferrer" class="text-teal-400 hover:text-teal-300 transition-colors duration-300">
+                        <i data-lucide="linkedin" class="w-8 h-8"></i>
+                        <span class="sr-only">Connect on LinkedIn</span>
+                    </a>
+                    <!-- Add more social links like Behance if available for graphic design -->
+                </div>
+                <p class="text-center text-gray-400 text-sm mt-8">
+                    &copy; <span id="current-year"></span> Waqas Hanif. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed bottom-6 right-6 bg-teal-500 hover:bg-teal-600 text-white p-3 rounded-full shadow-lg transition-transform duration-300 transform hover:scale-110 focus:outline-none focus:ring-4 focus:ring-teal-500 focus:ring-opacity-50 z-50 hidden">
+        <i data-lucide="chevron-up" class="w-6 h-6"></i>
+    </button>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
